@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= title
+    meta(content="charset=UTF-8")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+    if description
+      meta(name="description", content=`${description}`)
+  body
+    block header
+      div#jumbotron
+        div.container
+          #jumbotron-div
+            h1#jumbotron-text Welcome to my world
+
+    block content
+    block footer
+      div#footer
+        div.container
+          center
+            p
+             | &copy; Pratiksha Shrestha
+

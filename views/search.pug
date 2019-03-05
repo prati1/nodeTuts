@@ -1,0 +1,48 @@
+-
+  var jsonData = [
+      {
+        "id": "1",
+        "name": "Pratibha Shrestha",
+        "school": "School of Engineering",
+        "faculty": "Computer Engineering",
+        "batch": "2014"
+      },
+      {
+        "id": "2",
+        "name": "Ankita Sharma",
+        "school": "School of Engineering",
+        "faculty": "Computer Science",
+        "batch": "2014"
+      },
+      {
+        "id": "3",
+        "name": "Depenti Karki",
+        "school": "School of Science",
+        "faculty": "Pharmacy",
+        "batch": "2013"
+      }
+    ];
+p
+  | test search
+  a(href="/") Home
+  
+if searchQuery
+  table.searchResult
+    thead
+      td ID
+      td Name
+      td School
+      td Faculty
+      td Batch
+    - for (i = 0; i < jsonData.length; i++) 
+        - var name = (jsonData[i].name).toLowerCase();
+        - var nameIndex = name.indexOf(searchQuery);
+        if (nameIndex !== -1) 
+          tbody
+            td #{jsonData[i].id}
+            td #{jsonData[i].name}
+            td #{jsonData[i].school}
+            td #{jsonData[i].faculty}
+            td #{jsonData[i].batch}
+        
+    

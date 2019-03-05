@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  - var jsonData = [
+    {
+      "id":"1",
+      "name":"Pratibha Shrestha",
+      "school":"School of Engineering",
+      "faculty":"Computer Engineering",
+      "batch":"2014"
+    },
+    {
+      "id":"2",
+      "name":"Ankita Sharma",
+      "school":"School of Engineering",
+      "faculty":"Computer Science",
+      "batch":"2014"
+    },
+    {
+      "id":"3",
+      "name":"Depenti Karki",
+      "school":"School of Science",
+      "faculty":"Pharmacy",
+      "batch":"2013"
+    }
+  ];
+  p #{searchKey}
+  script.
+    console.log('data hello');
+    if searchKey{
+      jsonData.each(function(i,j){
+        if i.name = searchKey{
+          console.log(i.id)
+        }
+      })
+    }
