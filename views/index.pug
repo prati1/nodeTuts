@@ -3,12 +3,14 @@ extends layout
 block content
   .container
     h1= website_name
-    p Welcome to #{title}
+    p #{__('Welcome to CHINO')}
+    p #{__('Welcome')} #{title}
     input#search(type="search", placeholder="Search student by name")
     div#searchResult
     .searchButton
       a(href="/search/Test/") Test Search
     div.Test
+    p #{__('Test')}
 
   script(src="/javascripts/ajaxSearch.js")
 

@@ -14,7 +14,11 @@ html
         div.container
           #jumbotron-div
             h1#jumbotron-text Welcome! to my world
+            p #{__("Hello")}
             //test 12hello
+      #language
+        a(href="/en") English
+        a(href="/nl") #{__('Dutch')}
 
     block content
     block footer

@@ -52,3 +52,7 @@ a {
   padding: 7px;
   text-align: center;
 }
+
+#language a {
+  padding: 0 10px 0 10px;
+}
